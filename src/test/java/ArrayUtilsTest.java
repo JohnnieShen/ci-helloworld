@@ -45,4 +45,16 @@ public class ArrayUtilsTest {
     public void testOddOrPositiveBothPositivesAndNegatives() {
         assertEquals(3, ArrayUtils.oddOrPos(new int[]{-3, -2, 0, 1, 4}));
     }
+
+    @Test
+    public void testCountOfWithAndWithoutMatches() {
+        int[] input = {2, 3, 2, 4, 5, 2};
+        assertEquals(3, ArrayUtils.countOf(input, 2));
+    }
+
+    @Test
+    public void testCountOfNoMatches() {
+        int[] input = {1, 3, 5, 7};
+        assertEquals(0, ArrayUtils.countOf(input, 2));
+    }
 }
